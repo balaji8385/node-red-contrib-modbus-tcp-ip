@@ -83,6 +83,34 @@ module.exports = function (RED) {
                         text: "Sending Request"
                     })
 
+                    let responseCallBack = (err, res) => {
+                        if (!err) {
+                            node.status({
+                                fill: "green",
+                                shape: "dot",
+                                text: "Response Received " + end() + " ms"
+                            })
+                            msg.responseBuffer = {};
+                            msg.responseBuffer.buffer = Buffer.concat(res.response.data);
+                            connection.close(() => {
+                                node.log("Connection closed");
+                            });
+                            send(msg);
+                            done();
+                        } else {
+                            node.status({
+                                fill: "red",
+                                shape: "dot",
+                                text: "Error Getting Response"
+                            })
+                            node.error(err, err.message)
+                            connection.close(() => {
+                                node.log("Connection closed");
+                            });
+                            done();
+                        }
+                    }
+                    
                     if (msg.payload.functioncode == 1) {
                         connection.readCoils({
                             address: msg.payload.address,
@@ -115,34 +143,6 @@ module.exports = function (RED) {
                                 unitId: msg.payload.unitid
                             }
                         }, responseCallBack(err, res))
-                    }
-
-                    let responseCallBack = (err, res) => {
-                        if (!err) {
-                            node.status({
-                                fill: "green",
-                                shape: "dot",
-                                text: "Response Received " + end() + " ms"
-                            })
-                            msg.responseBuffer = {};
-                            msg.responseBuffer.buffer = Buffer.concat(res.response.data);
-                            connection.close(() => {
-                                node.log("Connection closed");
-                            });
-                            send(msg);
-                            done();
-                        } else {
-                            node.status({
-                                fill: "red",
-                                shape: "dot",
-                                text: "Error Getting Response"
-                            })
-                            node.error(err, err.message)
-                            connection.close(() => {
-                                node.log("Connection closed");
-                            });
-                            done();
-                        }
                     }
                 }
             }
