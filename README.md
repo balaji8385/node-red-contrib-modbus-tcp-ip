@@ -6,8 +6,13 @@ This package enables the user to read data from the modbus enabled devices throu
 
 npm install this module and you can find the block. Example node-red code can be found this repo.
 
+### Flow
 ![Flow](/sample/images/flow.png)
+
+### Editing Connection
 ![Edit Connection](/sample/images/edit.png)
+
+### Injecting Payload
 ![Input Payload](/sample/images/payload.png)
 
 ## Authors
