@@ -1,0 +1,22 @@
+{
+  "name": "node-red-contrib-modbus-tcp-ip",
+  "version": "1.0.1",
+  "description": "A simple node for realtime MODBUS TCP/IP Process with added features.",
+  "main": "modbus-tcp-ip.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Balaji L Narayanan",
+  "license": "ISC",
+  "dependencies": {
+    "modbus-stream": "^0.44.0"
+  },
+  "keywords": [
+    "node-red"
+  ],
+  "node-red": {
+    "nodes": {
+      "modbus-tcp-ip": "modbus-tcp-ip.js"
+    }
+  }
+}
