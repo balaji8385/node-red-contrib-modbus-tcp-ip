@@ -110,7 +110,7 @@ module.exports = function (RED) {
                             done();
                         }
                     }
-                    
+
                     if (msg.payload.functioncode == 1) {
                         connection.readCoils({
                             address: msg.payload.address,
@@ -118,7 +118,7 @@ module.exports = function (RED) {
                             extra: {
                                 unitId: msg.payload.unitid
                             }
-                        }, responseCallBack(err, res))
+                        }, responseCallBack)
                     } else if (msg.payload.functioncode == 2) {
                         connection.readDiscreteInputs({
                             address: msg.payload.address,
@@ -126,7 +126,7 @@ module.exports = function (RED) {
                             extra: {
                                 unitId: msg.payload.unitid
                             }
-                        }, responseCallBack(err, res))
+                        }, responseCallBack)
                     } else if (msg.payload.functioncode == 3) {
                         connection.readHoldingRegisters({
                             address: msg.payload.address,
@@ -134,7 +134,7 @@ module.exports = function (RED) {
                             extra: {
                                 unitId: msg.payload.unitid
                             }
-                        }, responseCallBack(err, res))
+                        }, responseCallBack)
                     } else if (msg.payload.functioncode == 4) {
                         connection.readInputRegisters({
                             address: msg.payload.address,
@@ -142,7 +142,7 @@ module.exports = function (RED) {
                             extra: {
                                 unitId: msg.payload.unitid
                             }
-                        }, responseCallBack(err, res))
+                        }, responseCallBack)
                     }
                 }
             }
