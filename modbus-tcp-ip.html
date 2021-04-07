@@ -4,8 +4,8 @@
         color: '#D8BFD8',
         defaults: {
             name: {value:"Modbus-TCP Flexi Getter"},
-            ip: {value:"192.168.0.100", required :true, type:"string"},
-            port: {value:26, required: true, validate:RED.validators.number()}
+            ip: {value:"192.168.0.100", type:"string"},
+            port: {value:26, validate:RED.validators.number()}
         },
         inputs:1,
         outputs:1,
