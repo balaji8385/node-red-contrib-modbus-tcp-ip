@@ -15,6 +15,10 @@
   "keywords": [
     "node-red"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/balaji8385/node-red-contrib-modbus-tcp-ip.git"
+},
   "node-red": {
     "nodes": {
       "modbus-tcp-ip": "modbus-tcp-ip.js"
