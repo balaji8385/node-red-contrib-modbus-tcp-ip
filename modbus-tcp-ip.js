@@ -1,4 +1,4 @@
-const modbus = require("./lib/modbus-stream/lib/modbus");
+const modbus = require("./module/modbus-stream/lib/modbus");
 
 let connection;
 let getModbusConnection = (ip, port) => {
