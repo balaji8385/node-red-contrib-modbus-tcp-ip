@@ -1,0 +1,69 @@
+{
+  "_args": [
+    [
+      "modbus-stream@0.44.0",
+      "D:\\balaji\\web application developments\\node-red-packages\\node-red-contrib-modbus-tcp-ip"
+    ]
+  ],
+  "_from": "modbus-stream@0.44.0",
+  "_id": "modbus-stream@0.44.0",
+  "_inBundle": false,
+  "_integrity": "sha512-10qY+WQETiz8rTng5YuCbtP3OjXHPtsLS7nxPxKag/OHtN4ff/mmMp/gaBvhVGNhFZ8mMpJOAjlyfDGgsJggPg==",
+  "_location": "/modbus-stream",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "modbus-stream@0.44.0",
+    "name": "modbus-stream",
+    "escapedName": "modbus-stream",
+    "rawSpec": "0.44.0",
+    "saveSpec": null,
+    "fetchSpec": "0.44.0"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/modbus-stream/-/modbus-stream-0.44.0.tgz",
+  "_spec": "0.44.0",
+  "_where": "D:\\balaji\\web application developments\\node-red-packages\\node-red-contrib-modbus-tcp-ip",
+  "author": {
+    "name": "Diogo Resende",
+    "email": "dresende@thinkdigital.pt"
+  },
+  "bugs": {
+    "url": "https://github.com/node-modbus/stream/issues"
+  },
+  "dependencies": {
+    "@types/node": "latest",
+    "modbus-pdu": "^1.13.0",
+    "serialport": ">=1.7.1 <7"
+  },
+  "description": "[![Build Status](https://secure.travis-ci.org/node-modbus/stream.png?branch=master)](http://travis-ci.org/node-modbus/stream) [![Package Version](https://badge.fury.io/js/modbus-stream.svg)](https://npmjs.org/package/modbus-stream) [![Dependency Status](https://gemnasium.com/badges/github.com/node-modbus/stream.svg)](https://gemnasium.com/github.com/node-modbus/stream)",
+  "devDependencies": {
+    "dtslint": "^0.4.2",
+    "mocha": "^5.2.0"
+  },
+  "homepage": "https://github.com/node-modbus/stream#readme",
+  "keywords": [
+    "modbus",
+    "serial",
+    "rtu",
+    "ascii",
+    "tcp",
+    "stream"
+  ],
+  "license": "MIT",
+  "main": "lib/modbus",
+  "name": "modbus-stream",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/node-modbus/stream.git"
+  },
+  "scripts": {
+    "dtslint": "dtslint types",
+    "test": "node test/run"
+  },
+  "types": "types",
+  "version": "0.44.0"
+}
