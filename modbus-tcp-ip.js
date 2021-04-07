@@ -38,7 +38,7 @@ module.exports = function (RED) {
             msg = msg;
             msg.payload = msg.payload;
             msg.ip = node.ip ? node.ip : msg.payload.modbus_ip;
-            msg.port = node.port ? parseInt(node.port) : parseInt(msg.payload.modbus_ip);
+            msg.port = node.port ? parseInt(node.port) : parseInt(msg.payload.modbus_port);
 
             if(!msg.ip || !msg.port) done("Invaid Modbus IP or PORT");
             else{
