@@ -9,7 +9,6 @@
   "author": "Balaji L Narayanan",
   "license": "ISC",
   "dependencies": {
-    "modbus-stream": "^0.44.0",
     "modbus-pdu": "^1.13.0"
   },
   "keywords": [
