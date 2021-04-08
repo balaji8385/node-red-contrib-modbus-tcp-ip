@@ -33,6 +33,7 @@ module.exports = function (RED) {
         RED.nodes.createNode(this, config);
         this.ip = config.ip;
         this.port = config.port;
+        this.logerror = config.logerror;
         var node = this;
         node.on('input', async function (msg, send, done) {
             msg = msg;
@@ -67,7 +68,7 @@ module.exports = function (RED) {
                             text: "Connection Established"
                         });
                     } catch (err) {
-                        node.error(err, err.message);
+                        if(node.logerror) node.error(err, err.message);
                         node.status({
                             fill: "red",
                             shape: "dot",
@@ -105,7 +106,7 @@ module.exports = function (RED) {
                                     shape: "dot",
                                     text: "Error Getting Response"
                                 })
-                                node.error(err, err.message)
+                                if(node.logerror) node.error(err, err.message)
                                 connection.close(() => {
                                     node.log("Connection closed");
                                 });

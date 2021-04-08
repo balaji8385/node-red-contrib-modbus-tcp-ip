@@ -5,7 +5,8 @@
         defaults: {
             name: {value:"Modbus-TCP Flexi Getter"},
             ip: {value:"192.168.0.100", type:"string"},
-            port: {value:26, validate:RED.validators.number()}
+            port: {value:26, validate:RED.validators.number()},
+            error: {value:true }
         },
         inputs:1,
         outputs:1,
@@ -29,6 +30,10 @@
     <div class=form-row>
             <label for="node-input-port"><i class="icon-tag"></i>Port</label>
             <input type="text" id="node-input-port" placeholder="Port">
+    </div>
+    <div class=form-row>
+            <label for="node-input-logerror"><i class="icon-tag"></i>Log Errors</label>
+            <input type="checkbox" id="node-input-logerror">
     </div>
 </script>
 
